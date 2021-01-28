@@ -10,3 +10,25 @@
 									 - Integration tests:
 										* GreetingControllerIntegrationTest
 											- Added shouldReturnCorrectString test
+											
+28.01.2021. (dsiprak)	  [0.02.000] - Added Configuration interface
+									 - Added the following configuration profiles: prod, dev and test
+									 - Added ConfigurationDev class
+									 - Added ConfigurationProd class
+									 - Added ConfigurationTest class
+									 - Added GreetingHelper class
+									 - Added Greeting enum
+									 - Added the following property files:
+										* application.properties
+										* application-dev.properties
+										* application-prod.properties
+										* application-test.properties
+									 - Class: GreetingController
+										* Added a default value for the name request parameter of the greetUser method
+										* Added configuration bean
+									 - Class: GreetingHelper
+										* Added validateGreeting method
+									 - Integration tests:
+										* GreetingControllerIntegrationTest
+											- Set "test" to be the active profile
+											- Modified the existing test to match the test profile properties
