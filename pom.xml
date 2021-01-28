@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>greeting</artifactId>
-	<version>0.01.000</version>
+	<version>0.02.000</version>
 	<name>Greeting application</name>
 	<description>Demo project for an interview task</description>
 	<properties>

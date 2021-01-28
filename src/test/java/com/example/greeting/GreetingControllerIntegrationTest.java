@@ -6,6 +6,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.context.annotation.Profile;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.http.HttpClient;
@@ -19,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
         classes = GreetingApplication.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
+@ActiveProfiles("test")
 public class GreetingControllerIntegrationTest {
 
     private HttpClient httpClient;
@@ -53,7 +56,7 @@ public class GreetingControllerIntegrationTest {
 
         // then
         assertEquals(200, response.statusCode());
-        assertEquals("Hi, Leonard!", response.body());
+        assertEquals("Hey, Leonard!", response.body());
     }
 
 }
