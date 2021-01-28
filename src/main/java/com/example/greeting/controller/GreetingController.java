@@ -1,6 +1,7 @@
 package com.example.greeting.controller;
 
 import com.example.greeting.configuration.Configuration;
+import com.example.greeting.core.Greeter;
 import com.example.greeting.util.GreetingHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,7 +27,7 @@ import static com.example.greeting.core.GreetingConstants.GREETING_ENDPOINT;
 public class GreetingController {
 
     @Autowired
-    Configuration configuration;
+    Greeter greeter;
 
 
     /**
@@ -38,11 +39,6 @@ public class GreetingController {
     @GetMapping(value = GREETING_ENDPOINT)
     public String greetUser(@RequestParam(name = "name", defaultValue = "Dario") String name) {
 
-        if(GreetingHelper.validateGreeting(configuration.getGreeting())) {
-            return configuration.getGreeting() + ", " + name + "!";
-        }
-        else {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid greeting used!");
-        }
+        return greeter.greet(name);
     }
 }

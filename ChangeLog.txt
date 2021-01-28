@@ -32,3 +32,9 @@
 										* GreetingControllerIntegrationTest
 											- Set "test" to be the active profile
 											- Modified the existing test to match the test profile properties
+											
+28.01.2021. (dsiprak)	  [0.03.000] - Added Greeter interface
+									 - Added GreeterComponent class
+									 - Class: GreetingController
+										* Replaced configuration bean with the greeter bean
+										* Moved greetUser method logic to the GreeterComponent class
