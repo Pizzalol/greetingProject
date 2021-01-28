@@ -38,3 +38,11 @@
 									 - Class: GreetingController
 										* Replaced configuration bean with the greeter bean
 										* Moved greetUser method logic to the GreeterComponent class
+										
+28.01.2021. (dsiprak)	  [0.03.001] - Added GreeterComponentTest
+									 - Class: GreeterComponent
+										* Set the configuration field to private
+									 - Unit tests:
+										* GreeterComponentTest
+											- Added greet_ValidGreeting_CorrectGreetingReturned
+											- Added greet_GreetThrowsException_InvalidGreetingConfiguration

@@ -20,7 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 public class GreeterComponent implements Greeter{
 
     @Autowired
-    Configuration configuration;
+    private Configuration configuration;
 
     @Override
     public String greet(String name) {
