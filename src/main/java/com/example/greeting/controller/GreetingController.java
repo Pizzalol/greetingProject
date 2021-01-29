@@ -1,18 +1,10 @@
 package com.example.greeting.controller;
 
-import com.example.greeting.configuration.Configuration;
 import com.example.greeting.core.Greeter;
-import com.example.greeting.util.GreetingHelper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import static com.example.greeting.core.GreetingConstants.GREETING_ENDPOINT;
 

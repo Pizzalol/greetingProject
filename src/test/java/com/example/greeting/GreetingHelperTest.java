@@ -1,19 +1,15 @@
 package com.example.greeting;
 
-import com.example.greeting.core.GreeterComponent;
-import com.example.greeting.core.TimeBasedGreeterComponent;
 import com.example.greeting.core.TimeBasedGreeting;
 import com.example.greeting.util.GreetingHelper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.MockitoAnnotations;
 import org.powermock.modules.junit4.PowerMockRunner;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.Calendar;

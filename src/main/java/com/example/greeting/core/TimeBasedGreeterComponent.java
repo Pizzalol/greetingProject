@@ -1,10 +1,7 @@
 package com.example.greeting.core;
 
-import com.example.greeting.configuration.Configuration;
 import com.example.greeting.util.GreetingHelper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import static com.example.greeting.core.GreetingConstants.TIME_BASED_GREETING;

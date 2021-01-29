@@ -1,23 +1,18 @@
 package com.example.greeting;
 
-import com.example.greeting.configuration.Configuration;
-import com.example.greeting.core.GreeterComponent;
 import com.example.greeting.core.TimeBasedGreeterComponent;
 import com.example.greeting.core.TimeBasedGreeting;
 import com.example.greeting.util.GreetingHelper;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
-import org.mockito.*;
-import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.mockito.MockedStatic;
 import org.powermock.modules.junit4.PowerMockRunner;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.util.ReflectionTestUtils;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mockStatic;
 
 @ActiveProfiles("test")
 @SpringBootTest(properties = "greeter.mode=timeBasedGreeting")

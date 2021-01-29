@@ -78,3 +78,6 @@
 											- Changed MockitoAnnotations call from initMocks to openMocks
 											
 29.01.2021. (dsiprak)	  [0.04.000] - Added Dockerfile
+
+29.01.2021. (dsiprak)	  [1.00.000] - Added Readme
+									 - Code cleanup
