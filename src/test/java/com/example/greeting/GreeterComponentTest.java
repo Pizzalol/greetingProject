@@ -32,8 +32,7 @@ public class GreeterComponentTest {
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
-        ReflectionTestUtils.setField(greeterComponent, "configuration", configuration);
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
