@@ -32,3 +32,47 @@
 										* GreetingControllerIntegrationTest
 											- Set "test" to be the active profile
 											- Modified the existing test to match the test profile properties
+											
+28.01.2021. (dsiprak)	  [0.03.000] - Added Greeter interface
+									 - Added GreeterComponent class
+									 - Class: GreetingController
+										* Replaced configuration bean with the greeter bean
+										* Moved greetUser method logic to the GreeterComponent class
+										
+28.01.2021. (dsiprak)	  [0.03.001] - Added GreeterComponentTest
+									 - Class: GreeterComponent
+										* Set the configuration field to private
+									 - Unit tests:
+										* GreeterComponentTest
+											- Added greet_ValidGreeting_CorrectGreetingReturned
+											- Added greet_GreetThrowsException_InvalidGreetingConfiguration
+											
+29.01.2021. (dsiprak)	  [0.03.002] - Added PowerMock depdendency
+									 - Added Mockito inline depdendency
+									 - Added TimeBasedGreeterComponent class
+									 - Added TimeBasedGreeting enum
+									 - Added GreetingHelperTest
+									 - Added TimeBasedGreeterComponentTest
+									 - Class: GreeterComponent
+										* Added ConditionalOnProperty annotation
+									 - Class: GreetingHelper
+										* Added getTimeBasedGreeting method
+									 - Class: GreetingConstants
+										* Added NORMAL_GREETING constant
+										* Added TIME_BASED_GREETING constant
+									 - Added "greeter.mode" property for the following property files:
+										* application-dev.properties
+										* application-prod.properties
+									 - Unit tests:
+										* GreetingHelperTest
+											- Added getTimeBasedGreeting_TimeIs3AM_GoodMorningReturned
+											- Added getTimeBasedGreeting_TimeIs12PM_GoodAfternoonReturned
+											- Added getTimeBasedGreeting_TimeIs5PM_GoodEveningReturned
+											- Added getTimeBasedGreeting_TimeIs8PM_GoodNightReturned
+										* TimeBasedGreeterComponentTest
+											- Added greet_ValidGreeting_GoodMorningReturned
+											- Added greet_ValidGreeting_GoodAfternoonReturned
+											- Added greet_ValidGreeting_GoodEveningReturned
+											- Added greet_ValidGreeting_GoodNightReturned
+										* GreeterComponentTest
+											- Changed MockitoAnnotations call from initMocks to openMocks
